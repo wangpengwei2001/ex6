@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>尊老爱幼</title>
+		<style type="text/css">
+		html,body{
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			overflow: hidden;
+		}
+		.image_list{
+			text-align: center;
+			margin-top:10px ;
+		}
+		.image_list img{
+			width: 500px;
+			height: 500px;
+			opacity: 0.7;
+		}
+		.image_list img:hover{
+			opacity:1;
+		}
+		#bg{
+				position:absolute;
+			      	top:0px;
+			      	left:0px;
+			      	background-color:#000000;
+			        width:100%;
+			      	height:100%;
+			      	background-repeat:no-repeat;
+			      	background-position:center;
+			      	background-size:80% auto;
+			      	display:none;
+		}
+		.ziti{
+			
+			color: #000000;
+			font-size: 5px;
+			
+		}
+		.close_btn{
+			height: 30px;
+			width: 30px;
+		        position:absolute;
+		      	top:30px;
+		      	right:30px;
+		      	cursor:pointer;
+		      	display:none;
+		      }
+			   img{
+			          width:400px;
+			          height:200px;
+			        }
+			  #view_box{
+			          width:2000px;
+			          height:200px;
+			          margin:50px auto;
+			          border-radius:25px;
+			          overflow:hidden;
+			        }
+					#inner{
+					        position:relative;
+					        left:0px;
+					        width:200px;
+					        height:200px;
+					        display:flex;
+					        justify-content:space-between;
+					      }
+						  #div1,#div2{
+						          width:200px;
+						          height:200px;
+						          display:flex;
+						          justify-content:space-between;
+						        }
+								 ul{
+								        list-style-type:none;
+								      	margin:0px auto;
+								      	padding:0px;
+								      }
+								      /* 导航菜单 */
+								      .menu{
+								      	background-color:#ffffff;
+								      	color:#ffffff;
+								      	width:100%;
+								      }
+								      .menu ul{
+								        width:100%;
+								      	display:flex;
+								      	justify-content:center;
+								      }
+								      .menu ul li{
+								        width:200px;
+								      	line-height:50px;
+								      	text-align:center;
+								      }
+		</style>
+		<script type="text/javascript">
+		function showImage(id){
+			document.getElementById("bg").style.backgroundImage="url(webp"+id+".png)";
+			document.getElementById("bg").style.display="block";
+		
+			document.getElementsByClassName("close_btn")[0].style.display = "block";
+			
+			
+		}
+		 var raf;//帧频
+		      var left = 0;//div的左边距
+		 function init(){
+		        //将所有图片添加给div2
+		        document.getElementById("div2").innerHTML = document.getElementById("div1").innerHTML;
+				        moveImage();
+		      }
+			    function moveImage(){
+			          //设置div左边距
+			          document.getElementById("inner").style.left = left+"px";
+			          left-=2;
+					
+			          
+			          //帧频：每秒60帧，每隔16.66毫秒执行一次
+			          raf = window.requestAnimationFrame(moveImage);
+					
+			        }
+		function closeImage(){
+			document.getElementById("bg").style.display="none";
+			
+			document.getElementsByClassName("close_btn")[0].style.display = "none";
+		}
+		</script>
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+	<body onload="init()">
+		<div class="menu">
+		      <ul>
+		        <a href="index-catalog.html"><li>返回目录</li></a>
+		      </ul>
+		    </div>
+		<div id="view_box">
+		     <div id="inner">
+		       <div id="div1">
+		        <img src="webp%20(1).png"/>
+				 <img src="webp%20(1).png"/>
+				  <img src="webp%20(1).png"/>
+				   <img src="webp%20(1).png"/>
+				    <img src="webp%20(1).png"/>
+					 <img src="webp%20(1).png"/>
+					  <img src="webp%20(1).png"/>
+					   <img src="webp%20(1).png"/>
+					    <img src="webp%20(1).png"/>
+						 <img src="webp%20(1).png"/>
+						  <img src="webp%20(1).png"/>
+						   <img src="webp%20(1).png"/>
+		       </div>
+		       <div id="div2"></div>
+		     </div>
+		   </div>
+		
+		
+		
+			
+			<span class="ziti"> 【思想观点】
+
+1.文明是最美的风景。美，不仅存在于风景中，也存在于我们的行为中。绚丽的风景是一种美，文明的行为也是一种美。
+
+2.文明是最美的风景。美，不仅存在于风景中，也存在于我们的行为中。绚丽的风景是一种美，文明的行为也是一种美。
+
+3.一个受尊敬的旅行者，应当能够掌握足够多的细节，从细节中获得和这个世界对话的技巧，敬畏自然和历史，尊重文化的差异，尊重公共秩序，尊重传统，尊重人，最重要的是尊重自我，做到入乡随俗，保持基本的礼貌和仪态。
+
+【原因分析】
+
+1最根本的可能是人们对于不文明旅游行为的“习惯性忽视”，没有养成一种文明自觉，致使文明旅游成为“人人眼中有、人人心中无”的软肋。
+
+【对策分析】
+
+1.积极倡导文明旅游，加强文明出游规范化管理，扎紧“文明出游”制度笼子，多渠道提升社会监督力，可以从“不乱刻乱画”、“不乱丢垃圾”这样的细节做起，培养社会化、大众化的文明出游意识，助力游客养成良好旅游习惯，以唤得旅游市场的文明回归。
+
+2.游客自身文明素质欠缺造成的，但从侧面也暴露出一些景区管理不到位、服务能力不足等问题。这就需要旅游部门要不断加大文明旅游知识的宣传，及时提醒游客要尊重当地习俗和文化，塑造个人乃至整个国家的文明形象。
+
+【背景分析】
+
+1.仓廪实而知礼节，衣食足而知荣辱。”随着生活水平的提高，旅游已经越来越成为人们的一种必不可少的生活内容，但许多游客的文明素质提升并未跟上节拍。
+</span><br />
+		
+		<div id="bg"></div>
+		
+		<div class="image_list">
+			<img src="webp.png" title="点击查看大图" onclick="showImage(1)"/>
+			
+			<img src="bg.png" title="点击查看大图" onclick="showImage(2)"/><br />
+			</div>
+			
+			
+		
+		
+		
+		<img class="close_btn" src="close_btn.png"  title="关闭" onclick="closeImage()"/>
+		
+		
+	</body>
+</html>
